@@ -1,0 +1,210 @@
+/* Main part */
+
+.s1{
+    background-image: url(../images/pexels-thiha-myokyaw-120465604.jpg);
+    background-size:cover;
+    background-color: black;
+    overflow: auto;
+}
+
+.s3{
+    /* background-image: url(../images/sec_background.webp); */
+    /* background-size: cover; */
+    background:  #386C5F;
+    /* overflow: auto; */
+}
+
+
+
+.main-container{
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.greeting-wrapper{
+    display: grid;
+    grid-template-rows: 0.5fr 1fr;
+	grid-template-areas:
+    'greeting-left' 
+    'greeting-right';
+    margin: 0 auto;
+    justify-content: center;
+    align-content: center;
+    padding-top: 10px;
+    min-height: 40em;
+}
+
+.greeting-left{
+    display: grid;
+    grid-area: greeting-left;
+}
+
+.greeting-left #logo_greeting{
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    height: 38vh;        
+}
+
+.greeting-right{
+    grid-area: greeting-right;
+ 	display:inline-block;
+	text-align: center;
+    align-items: center;
+    justify-content:center;
+    
+}
+
+.word{
+    margin-top: 70px;
+    max-width: 1245px;
+    font-size: 3.8vh;
+    text-align: center;
+    font-weight: 300;
+    font-style: italic;
+    font-weight: bold;
+    line-height: 90%;
+    color: aliceblue;
+}
+
+.greeting-right h1{
+    font-family: 'El Messiri', sans-serif;
+    margin-top: 50px;
+    max-width: 1245px;
+    font-size: 8.2vh;
+    text-align: center;
+    font-weight: bold;
+    line-height: 90%;
+    color: aliceblue;
+
+}
+
+
+.greeting-right h3{
+    margin-top: 2px;
+    font-size: 3.9vh;
+    text-align: center;
+    font-weight: 300;
+    font-style: italic;
+    color: aliceblue;
+}
+
+
+.intro-wrapper{
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-areas: 'left-column right-column';
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+.left-column{
+    grid-area: left-column;
+    padding: 3px 10px;
+}
+
+#profile_pic{
+    display: block;
+    margin: 0 auto;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 200px 200px;
+    
+}
+
+.right-column{
+    grid-area: right-column;
+    display: grid;
+    align-content: center;
+    border: 1px solid rgb(226, 218, 218);
+    background-color: #f1f1e9e4;
+    border-radius: 15px 15px;
+    justify-content: center;
+    padding: 10px 10px;
+    -webkit-box-shadow: -3px 3px 3px -1px rgba(0,0,0,0.75);
+	-moz-box-shadow: -3px 3px 3px -1px rgba(0,0,0,0.75);
+	box-shadow: -1px 1px 3px -1px rgba(0,0,0,0.75);
+    
+}
+
+.right-column h2{
+    text-align: center;
+    font-size: 4vh;
+    font-weight: 700;
+}
+
+.right-column h2:hover{
+    font-size: 6vh;
+    font-weight: 800;
+    transition: 0.5s;
+}
+#preview{
+    position: relative;
+    text-align:justify;
+    font-size: 2.5vh;
+    padding: 15px 15px;
+    list-style-type: none;
+}
+@media screen and (max-width: 1200px){
+	.main-container{
+		width: 95%;
+	}
+}
+
+@media screen and (max-width: 970px){
+    .main-container{
+        width: 95%;
+    }
+	.intro-wrapper{
+		grid-template-columns: 1fr;
+		grid-template-areas: 
+			'left-column' 
+            'right-column'
+		;
+	}
+
+	.right-column{
+		justify-content: center;
+	}
+
+    #profile_pic{
+        padding-top: 15px;
+        margin: 0 auto;
+    }
+
+}
+
+@media screen and (max-width: 448px){
+	#preview-shadow{
+		max-width: 280px;
+		height: 180px;
+		padding-left: 10px;
+		padding-top: 10px;
+	}
+    
+	#preview{
+		width: 280px;
+
+	}
+
+}
+
+/* footer */
+.footerCol {
+    padding: 10px 0;
+    text-align: center;
+    background-color: rgb(30, 30, 30);
+    color: white;
+}
+
+.copyrightCol {
+    text-align: center;
+    padding: 10px 0 0;
+    font-size: 2vh;
+}
+
+.copyrightCol p {
+      margin: 0;
+}

@@ -1,0 +1,237 @@
+:root {
+    --baseColor: #21243D;
+    --primaryColor: #9C07B6;
+    --primaryDarkColor: #3D0048;
+    --primaryHoverColor: #900AA8;
+    --secondaryColor: #F9B000;
+    --regular: 400;
+    --medium: 500;
+    --bold: 600;
+    --black: 900;
+    --lightBg: #F1F1F1;
+}
+
+.s4{
+    background: #F7F7F7;
+    padding: 15px;
+}
+
+.s4 h1{
+    text-align: center;
+    font-size: 4vh;
+    font-weight: 500;
+    padding: 10px;
+    margin: 0;
+}
+
+a{
+    color: black;
+}
+
+a:hover {
+    color: var(--primaryDarkColor);
+}
+
+a, .btn {
+    -webkit-transition: all 300ms ease-in-out 0s;
+    -o-transition: all 300ms ease-in-out 0s;
+    transition: all 300ms ease-in-out 0s;
+    text-decoration: none;
+}
+
+.btn:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+
+.portfolio-wrapper{
+    margin: 0 auto;
+    justify-content: center;
+    align-content: center;
+    padding-top: 10px;
+    min-height: 40em;
+    
+}
+
+.portfolio-wrapper a{
+    color: black;
+}
+
+.portfolioRow .pColMain:nth-child(2n-1) .pCol {
+    margin-top: -110px;
+}
+
+.mdTitle {
+    font-size: 4vh;
+    line-height: normal;
+    font-weight: var(--bold);
+    font-family: var(--titleFont)
+}
+
+.lgTitle {
+    font-size: 3.8vh;
+    line-height: normal;
+    font-weight: var(--bold);
+    font-family: var(--titleFont)
+}
+
+.lgTitle a{
+    color: inherit;
+}
+
+.smText {
+    font-size: 3.8vh;
+}
+
+.regular {
+    font-weight: var(--regular);
+}
+
+.lgTitle {
+  font-size: 25px;
+  line-height: normal;
+  font-weight: var(--bold);
+  font-family: var(--titleFont)
+}
+
+.posInitial {
+    position: initial;
+}
+
+.portfolioOption {
+      padding: 5px 0 16px;
+}
+
+.portfolioCard {
+    padding: 20px 0;
+}
+
+
+.port-grid{
+    display: grid;
+    margin: 2 auto;
+    margin-left: 5px;
+    grid-template-columns: 0.6fr 2fr;
+}
+
+.portfolioImgCol img {
+    border-radius: 10px;
+    background-color: #F7F7F7;
+    width: 246px;
+    height: 184px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    
+}
+
+.portfolioContentCol > p:last-child {
+    margin-bottom: 0;
+}
+
+.portfolioOption li {
+    display: inline-block;
+    padding-right: 20px;
+}
+
+.sectionSpace {
+    padding: 80px 0;
+}
+
+.sectionSpaceSm {
+    padding: 35px 0;
+}
+
+.grid-title{
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'grid-left grid-right';
+    align-self: auto;
+}
+
+.grid-left{
+    display: grid;
+    grid-area: grid-left;
+    float:inline-end;
+}
+
+.col h4{
+    font-size: 3vh;
+    background-color: #386C5F;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.col h4:hover{
+    background-color: #BFAC36;
+    font-weight: 700;
+}
+
+.grid-right{
+    display: grid;
+    grid-area: grid-right;
+    float:right;
+}
+
+.dateLbl {
+	display: inline-block;
+	padding: 4px 10px;
+	background-color: #2e1d39;
+	border-radius: 25px;
+	color: #fff;
+	font-size: 14px;
+	line-height: 1;
+	font-weight: var(--bold);
+}
+
+.portfolio-border{
+    align-content: center;
+    /* border: 1px solid rgb(226, 218, 218); */
+    /* border-radius: 150px 18px; */
+    justify-content: center;
+    /* -webkit-box-shadow: 13px 14px 30px -11px rgba(0,0,0,0.63); */
+    /* -moz-box-shadow: 13px 14px 30px -11px rgba(0,0,0,0.63); */
+    /* box-shadow: 13px 14px 30px -11px rgba(0,0,0,0.63); */
+    /* padding: 15px; */
+}
+
+/* @media (min-width:992px) {
+    .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+        max-width: 890px;
+    }
+    .headerCol .container-fluid {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+} */
+
+@media (min-width:1200px) {
+    .headerCol .container-fluid {
+      padding-left: 55px;
+      padding-right: 55px;
+    }
+}
+
+
+
+@media screen and (max-width: 970px){
+    .portfolio-wrapper{
+        width: 98%;
+    }
+	
+    .port-grid{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "port-grid-left" "port-grid-right";
+        justify-content: space-evenly;
+        align-items: center;
+        align-content: center;
+    }
+
+    .grid-right{
+        font-size: 2vh;;
+        display: grid;
+    }
+
+}

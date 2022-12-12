@@ -1,0 +1,89 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CMS Portfolio</title>
+    <link rel="stylesheet" href="{% static './css/menu.css' %}">
+    <link rel="stylesheet" href="{% static './css/home.css' %}">
+    <link rel="stylesheet" href="{% static './css/services.css' %}">
+    <link rel="stylesheet" href="{% static './css/portfolio.css' %}">
+    <link rel="stylesheet" href="{% static './css/contact.css' %}">
+    
+    <!-- Bootstrap -->
+    <!-- <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7.0.5/swiper-bundle.min.css">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet"> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;1,400;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=El+Messiri&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="{% static 'js/menu.js' %}"></script>
+    <script src="{% static 'js/text.animation.js' %}"></script>
+    <link rel="canonical" href="{{request.path}}"/>
+    <link rel="home" href="{% url 'main:home' %}"/>
+    <link rel="contact" href="{% url 'main:contact' %}"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7.0.5/swiper-bundle.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script src="https://unpkg.com/swiper@7.0.5/swiper-bundle.min.js"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+
+</head>
+<nav>
+    <ul class="menu">
+        <a href="{% url 'main:home' %}"><img id="logo" src="{% static 'images/logo_idea1.png' %}"></a>
+        <li class="item"><a href="{% url 'main:home' %}">Home</a></li>
+        <li class="item"><a href="#services">Services</a></li>
+        <li class="item"><a href="{% url 'main:portfolios' %}">Portfolio</a></li>
+        <li class="item"><a href="#about">About</a></li>
+        <li class="item"><a href="#contact">Contact</a></li>
+        <li class="toggle"><span class="bars"></span></li>
+    </ul>
+</nav>
+
+<main>
+    <body>
+        <section>
+        <div class="lightBg">
+          <div class="container">
+            <div class="portfolioContentMain">
+              <div class="row g-3 g-md-4 g-lg-5 portfolioRow">
+                {% for obj in object_list %}
+                <div class="col-md-6 pColMain">
+                  <div class="pCol">
+                    <a href="{% url 'main:portfolio' slug=obj.slug %}" >
+                    <img src="{{obj.image.url}}" alt="..." class="pImg">
+                    </a>
+                  </div>
+                </div>
+                {% endfor %}
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </body>
+    
+</main>
+
+<footer>
+    <div class="footerCol">
+      <div class="container">
+        
+        <div class="copyrightCol">
+          <p>Copyright © {% now 'Y' %} All rights reserved. Designed by CMS Bioinformatics</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+</html>
